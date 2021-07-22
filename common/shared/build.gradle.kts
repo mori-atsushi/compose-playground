@@ -8,6 +8,9 @@ plugins {
 kotlin {
     android()
     jvm()
+    js(IR) {
+        browser()
+    }
 
     val iosTarget: (String, KotlinNativeTarget.() -> Unit) -> KotlinNativeTarget =
         if (System.getenv("SDK_NAME")?.startsWith("iphoneos") == true)
