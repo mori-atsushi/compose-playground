@@ -10,5 +10,6 @@ pluginManagement {
 rootProject.name = "ComposePlayground"
 include(":androidApp")
 include(":desktop")
+include(":web")
 include(":common:shared")
 include(":common:compose-ui")
