@@ -1,5 +1,6 @@
 object Versions {
-    const val kotlin = "1.5.10"
+    const val kotlin = "1.5.21"
+    const val composeJb = "0.5.0-build262"
 
     object Androidx {
         const val appcompat = "1.3.0"

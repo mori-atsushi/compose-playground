@@ -11,3 +11,4 @@ rootProject.name = "ComposePlayground"
 include(":androidApp")
 include(":shared")
 include(":desktop")
+include(":compose-ui")
