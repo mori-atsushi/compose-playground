@@ -30,7 +30,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":compose-ui"))
+    implementation(project(":common:compose-ui"))
 
     // androidx
     implementation(Deps.Androidx.appcompat)

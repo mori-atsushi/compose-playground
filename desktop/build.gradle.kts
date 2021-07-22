@@ -13,7 +13,7 @@ kotlin {
         named("jvmMain") {
             dependencies {
                 implementation(compose.desktop.currentOs)
-                implementation(project(":compose-ui"))
+                implementation(project(":common:compose-ui"))
             }
         }
     }
