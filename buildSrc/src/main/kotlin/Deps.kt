@@ -1,4 +1,7 @@
 object Deps {
+    const val kotlinCoroutines =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.kotlinCoroutines}"
+
     object Androidx {
         const val appcompat =
             "androidx.appcompat:appcompat:${Versions.Androidx.appcompat}"
@@ -18,5 +21,11 @@ object Deps {
             const val material =
                 "androidx.compose.material:material:${Versions.Androidx.compose}"
         }
+    }
+
+    object Ktor {
+        const val core = "io.ktor:ktor-client-core:${Versions.ktor}"
+        const val android = "io.ktor:ktor-client-android:${Versions.ktor}"
+        const val ios = "io.ktor:ktor-client-ios:${Versions.ktor}"
     }
 }
