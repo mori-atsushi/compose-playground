@@ -25,7 +25,8 @@ object Deps {
 
     object Ktor {
         const val core = "io.ktor:ktor-client-core:${Versions.ktor}"
-        const val android = "io.ktor:ktor-client-android:${Versions.ktor}"
+        const val cio = "io.ktor:ktor-client-cio:${Versions.ktor}"
         const val ios = "io.ktor:ktor-client-ios:${Versions.ktor}"
+        const val js = "io.ktor:ktor-client-js:${Versions.ktor}"
     }
 }

@@ -40,7 +40,7 @@ kotlin {
         }
         val androidMain by getting {
             dependencies {
-                implementation(Deps.Ktor.android)
+                implementation(Deps.Ktor.cio)
             }
         }
         val androidTest by getting {
@@ -55,6 +55,16 @@ kotlin {
             }
         }
         val iosTest by getting
+        val jvmMain by getting {
+            dependencies {
+                implementation(Deps.Ktor.cio)
+            }
+        }
+        val jsMain by getting {
+            dependencies {
+                implementation(Deps.Ktor.js)
+            }
+        }
     }
 }
 

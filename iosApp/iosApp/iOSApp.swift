@@ -1,8 +1,13 @@
 import SwiftUI
+import shared
 
 @main
 struct iOSApp: App {
-	var body: some Scene {
+    init() {
+        Sample().sample()
+    }
+
+    var body: some Scene {
 		WindowGroup {
 			ContentView()
 		}
