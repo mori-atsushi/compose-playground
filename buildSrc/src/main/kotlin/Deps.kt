@@ -9,8 +9,15 @@ object Deps {
             "androidx.appcompat:appcompat:${Versions.Androidx.appcompat}"
 
         object Activity {
+            const val ktx =
+                "androidx.activity:activity-ktx:${Versions.Androidx.activity}"
             const val compose =
                 "androidx.activity:activity-compose:${Versions.Androidx.activity}"
+        }
+
+        object Lifecycle {
+            const val viewmodel=
+                "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.Androidx.lifecycle}"
         }
 
         object Compose {

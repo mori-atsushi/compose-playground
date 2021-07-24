@@ -1,4 +1,4 @@
-package com.example.compose_playground.compose_ui.di
+package com.example.compose_playground.compose_util
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -7,7 +7,7 @@ import org.koin.core.qualifier.Qualifier
 import org.koin.mp.KoinPlatformTools
 
 @Composable
-internal inline fun <reified T : Any> get(
+inline fun <reified T : Any> get(
     key: Any?,
     qualifier: Qualifier? = null,
     noinline parameters: ParametersDefinition? = null,

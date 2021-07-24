@@ -1,5 +1,3 @@
-import org.jetbrains.compose.compose
-
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
@@ -9,16 +7,23 @@ plugins {
 kotlin {
     android()
     jvm()
+    js(IR) {
+        browser()
+    }
 
     sourceSets {
         val commonMain by getting {
             dependencies {
                 implementation(compose.runtime)
-                implementation(compose.foundation)
-                implementation(compose.material)
                 implementation(Deps.Koin.core)
-                implementation(project(":common:compose-util"))
                 implementation(project(":common:shared"))
+            }
+        }
+        val androidMain by getting {
+            dependencies {
+                implementation(Deps.Androidx.Compose.ui)
+                implementation(Deps.Androidx.Activity.ktx)
+                implementation(Deps.Androidx.Lifecycle.viewmodel)
             }
         }
     }
@@ -26,14 +31,9 @@ kotlin {
 
 android {
     compileSdk = 30
-
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     defaultConfig {
         minSdk = 21
         targetSdk = 30
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
     }
 }

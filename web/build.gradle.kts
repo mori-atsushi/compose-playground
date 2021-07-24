@@ -19,6 +19,7 @@ kotlin {
                 implementation(compose.web.core)
                 implementation(compose.runtime)
                 implementation(project(":common:shared"))
+                implementation(project(":common:compose-util"))
             }
         }
     }
