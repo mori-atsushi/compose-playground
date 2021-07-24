@@ -1,27 +1,18 @@
 package com.example.compose_playground.network
 
-import com.example.compose_playground.model.User
 import com.example.compose_playground.util.log.Log
-import io.ktor.client.*
-import io.ktor.client.features.json.*
-import io.ktor.client.features.json.serializer.*
-import io.ktor.client.request.*
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import kotlinx.serialization.json.Json
+import org.koin.core.component.KoinComponent
+import org.koin.core.component.inject
 
-object Sample {
+object Sample : KoinComponent {
+    private val gitHubApi: GitHubApi by inject()
+
     fun sample() {
-        val json = Json {
-            ignoreUnknownKeys = true
-        }
-        val client = HttpClient {
-            install(JsonFeature) {
-                serializer = KotlinxSerializer(json)
-            }
-        }
-        GlobalScope.launch {
-            val response: User = client.get("https://api.github.com/users/google")
+        GlobalScope.launch(Dispatchers.Main) {
+            val response = gitHubApi.getRepoList("Google")
             Log.d("Sample", response)
         }
     }

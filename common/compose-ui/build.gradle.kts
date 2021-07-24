@@ -16,6 +16,7 @@ kotlin {
                 implementation(compose.runtime)
                 implementation(compose.foundation)
                 implementation(compose.material)
+                implementation(Deps.Koin.core)
                 implementation(project(":common:shared"))
             }
         }

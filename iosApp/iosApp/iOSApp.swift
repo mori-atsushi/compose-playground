@@ -4,6 +4,7 @@ import shared
 @main
 struct iOSApp: App {
     init() {
+        EntryKt.setupDI()
         Sample().sample()
     }
 

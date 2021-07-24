@@ -14,6 +14,7 @@ kotlin {
             dependencies {
                 implementation(compose.desktop.currentOs)
                 implementation(project(":common:compose-ui"))
+                implementation(project(":common:shared"))
             }
         }
     }
