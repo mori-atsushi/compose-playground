@@ -1,10 +1,10 @@
 package com.example.compose_playground.web
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import com.example.compose_playground.Greeting
+import com.example.compose_playground.compose_util.di.getViewModel
 import com.example.compose_playground.di.setupDI
-import com.example.compose_playground.network.Sample
+import com.example.compose_playground.viewmodel.TopViewModel
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
 import org.jetbrains.compose.web.renderComposable
@@ -18,9 +18,7 @@ fun main() {
 
 @Composable
 fun App() {
-    LaunchedEffect(Unit) {
-        Sample.sample()
-    }
+    val viewModel: TopViewModel = getViewModel(Unit)
     val greet = Greeting().greeting()
 
     Div({
