@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
-
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
@@ -19,6 +17,13 @@ kotlin {
                 implementation(compose.runtime)
                 implementation(Deps.Koin.core)
                 implementation(project(":common:shared"))
+            }
+        }
+        val androidMain by getting {
+            dependencies {
+                implementation(Deps.Androidx.Compose.ui)
+                implementation(Deps.Androidx.Activity.ktx)
+                implementation(Deps.Androidx.Lifecycle.viewmodel)
             }
         }
     }
