@@ -32,4 +32,8 @@ object Deps {
         const val js = "io.ktor:ktor-client-js:${Versions.ktor}"
         const val serialization = "io.ktor:ktor-client-serialization:${Versions.ktor}"
     }
+
+    object Koin {
+        const val core = "io.insert-koin:koin-core:${Versions.koin}"
+    }
 }

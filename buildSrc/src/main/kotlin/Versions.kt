@@ -11,4 +11,5 @@ object Versions {
     }
 
     const val ktor = "1.6.1"
+    const val koin = "3.1.2"
 }

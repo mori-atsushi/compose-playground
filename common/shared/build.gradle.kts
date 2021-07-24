@@ -33,6 +33,7 @@ kotlin {
                 implementation(Deps.kotlinSerialization)
                 implementation(Deps.Ktor.core)
                 implementation(Deps.Ktor.serialization)
+                implementation(Deps.Koin.core)
             }
         }
         val commonTest by getting {
