@@ -2,6 +2,7 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 
 plugins {
     kotlin("multiplatform")
+    kotlin("plugin.serialization") version Versions.kotlin
     id("com.android.library")
 }
 
@@ -26,22 +27,48 @@ kotlin {
         }
     }
     sourceSets {
-        val commonMain by getting
+        val commonMain by getting {
+            dependencies {
+                implementation(Deps.kotlinCoroutines)
+                implementation(Deps.kotlinSerialization)
+                implementation(Deps.Ktor.core)
+                implementation(Deps.Ktor.serialization)
+                implementation(Deps.Koin.core)
+            }
+        }
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test-common"))
                 implementation(kotlin("test-annotations-common"))
             }
         }
-        val androidMain by getting
+        val androidMain by getting {
+            dependencies {
+                implementation(Deps.Ktor.cio)
+            }
+        }
         val androidTest by getting {
             dependencies {
                 implementation(kotlin("test-junit"))
                 implementation("junit:junit:4.13.2")
             }
         }
-        val iosMain by getting
+        val iosMain by getting {
+            dependencies {
+                implementation(Deps.Ktor.ios)
+            }
+        }
         val iosTest by getting
+        val jvmMain by getting {
+            dependencies {
+                implementation(Deps.Ktor.cio)
+            }
+        }
+        val jsMain by getting {
+            dependencies {
+                implementation(Deps.Ktor.js)
+            }
+        }
     }
 }
 

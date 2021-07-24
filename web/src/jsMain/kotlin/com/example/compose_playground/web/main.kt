@@ -1,12 +1,16 @@
 package com.example.compose_playground.web
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import com.example.compose_playground.Greeting
+import com.example.compose_playground.di.setupDI
+import com.example.compose_playground.network.Sample
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
 import org.jetbrains.compose.web.renderComposable
 
 fun main() {
+    setupDI()
     renderComposable(rootElementId = "root") {
         App()
     }
@@ -14,6 +18,9 @@ fun main() {
 
 @Composable
 fun App() {
+    LaunchedEffect(Unit) {
+        Sample.sample()
+    }
     val greet = Greeting().greeting()
 
     Div({

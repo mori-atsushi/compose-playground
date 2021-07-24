@@ -1,4 +1,9 @@
 object Deps {
+    const val kotlinCoroutines =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.kotlinCoroutines}"
+    const val kotlinSerialization =
+        "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.kotlinSerialization}"
+
     object Androidx {
         const val appcompat =
             "androidx.appcompat:appcompat:${Versions.Androidx.appcompat}"
@@ -18,5 +23,17 @@ object Deps {
             const val material =
                 "androidx.compose.material:material:${Versions.Androidx.compose}"
         }
+    }
+
+    object Ktor {
+        const val core = "io.ktor:ktor-client-core:${Versions.ktor}"
+        const val cio = "io.ktor:ktor-client-cio:${Versions.ktor}"
+        const val ios = "io.ktor:ktor-client-ios:${Versions.ktor}"
+        const val js = "io.ktor:ktor-client-js:${Versions.ktor}"
+        const val serialization = "io.ktor:ktor-client-serialization:${Versions.ktor}"
+    }
+
+    object Koin {
+        const val core = "io.insert-koin:koin-core:${Versions.koin}"
     }
 }

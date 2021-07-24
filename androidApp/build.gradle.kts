@@ -31,6 +31,7 @@ android {
 
 dependencies {
     implementation(project(":common:compose-ui"))
+    implementation(project(":common:shared"))
 
     // androidx
     implementation(Deps.Androidx.appcompat)
