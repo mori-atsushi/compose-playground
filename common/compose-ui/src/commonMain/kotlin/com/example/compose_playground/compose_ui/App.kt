@@ -10,7 +10,7 @@ import androidx.compose.runtime.DisposableEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.example.compose_playground.Greeting
-import com.example.compose_playground.compose_ui.di.get
+import com.example.compose_playground.compose_util.di.get
 import com.example.compose_playground.viewmodel.TopViewModel
 
 @Composable

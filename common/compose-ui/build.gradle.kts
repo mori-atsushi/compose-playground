@@ -17,6 +17,7 @@ kotlin {
                 implementation(compose.foundation)
                 implementation(compose.material)
                 implementation(Deps.Koin.core)
+                implementation(project(":common:compose-util"))
                 implementation(project(":common:shared"))
             }
         }
