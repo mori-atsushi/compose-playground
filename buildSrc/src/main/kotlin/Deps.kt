@@ -1,6 +1,8 @@
 object Deps {
     const val kotlinCoroutines =
         "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.kotlinCoroutines}"
+    const val kotlinSerialization =
+        "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.kotlinSerialization}"
 
     object Androidx {
         const val appcompat =
@@ -28,5 +30,6 @@ object Deps {
         const val cio = "io.ktor:ktor-client-cio:${Versions.ktor}"
         const val ios = "io.ktor:ktor-client-ios:${Versions.ktor}"
         const val js = "io.ktor:ktor-client-js:${Versions.ktor}"
+        const val serialization = "io.ktor:ktor-client-serialization:${Versions.ktor}"
     }
 }

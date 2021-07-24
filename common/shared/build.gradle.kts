@@ -2,6 +2,7 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 
 plugins {
     kotlin("multiplatform")
+    kotlin("plugin.serialization") version Versions.kotlin
     id("com.android.library")
 }
 
@@ -29,7 +30,9 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation(Deps.kotlinCoroutines)
+                implementation(Deps.kotlinSerialization)
                 implementation(Deps.Ktor.core)
+                implementation(Deps.Ktor.serialization)
             }
         }
         val commonTest by getting {
