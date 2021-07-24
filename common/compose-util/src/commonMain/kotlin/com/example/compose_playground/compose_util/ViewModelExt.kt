@@ -1,4 +1,4 @@
-package com.example.compose_playground.compose_util.di
+package com.example.compose_playground.compose_util
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
