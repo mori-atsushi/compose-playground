@@ -5,12 +5,11 @@ import shared
 struct iOSApp: App {
     init() {
         EntryKt.setupDI()
-        Sample().sample()
     }
 
     var body: some Scene {
 		WindowGroup {
-			ContentView()
+            TopPage()
 		}
 	}
 }
