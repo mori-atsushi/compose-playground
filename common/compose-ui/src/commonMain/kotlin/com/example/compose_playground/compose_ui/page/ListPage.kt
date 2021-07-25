@@ -8,26 +8,26 @@ import com.example.compose_playground.compose_ui.widget.RepoList
 import com.example.compose_playground.compose_ui.widget.SearchBox
 import com.example.compose_playground.compose_util.getViewModel
 import com.example.compose_playground.viewmodel.ListViewModel
-import com.example.compose_playground.viewmodel.ListViewModel.Input
+import com.example.compose_playground.viewmodel.ListViewModel.Action
 
 @Composable
 fun ListPage() {
     val viewModel = getViewModel<ListViewModel>(Unit)
-    val output by viewModel.output.collectAsState()
-    val dispatch = viewModel::input
+    val state by viewModel.state.collectAsState()
+    val dispatch = viewModel::action
 
     Column {
         SearchBox(
-            value = output.userName,
+            value = state.userName,
             onValueChange = {
-                dispatch(Input.SetUserName(it))
+                dispatch(Action.SetUserName(it))
             },
             onSubmit = {
-                dispatch(Input.Submit)
+                dispatch(Action.Submit)
             }
         )
         RepoList(
-            repoList = output.repoList
+            repoList = state.repoList
         )
     }
 }

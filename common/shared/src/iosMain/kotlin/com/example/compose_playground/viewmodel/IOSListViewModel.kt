@@ -3,15 +3,15 @@ package com.example.compose_playground.viewmodel
 class IOSListViewModel(
     private val viewModel: ListViewModel
 ) {
-    val initialOutput: ListViewModel.Output
-        get() = viewModel.output.value
+    val initialState: ListViewModel.State
+        get() = viewModel.state.value
 
-    fun observe(f: (ListViewModel.Output) -> Unit) {
-        viewModel.output.observe(viewModel, f)
+    fun observeState(f: (ListViewModel.State) -> Unit) {
+        viewModel.state.observe(viewModel, f)
     }
 
-    fun input(input: ListViewModel.Input) {
-        viewModel.input(input)
+    fun action(action: ListViewModel.Action) {
+        viewModel.action(action)
     }
 
     fun clear() {

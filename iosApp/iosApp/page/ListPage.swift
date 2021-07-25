@@ -3,32 +3,32 @@ import shared
 
 struct ListPage: View {
     private let viewModel: IOSListViewModel
-    @State private var output: ListViewModel.Output
+    @State private var state: ListViewModel.State
 
     init() {
         let viewModel = ViewModelKt.getListViewModel()
         self.viewModel = viewModel
-        self.output = viewModel.initialOutput
+        self.state = viewModel.initialState
     }
 
     var body: some View {
         VStack {
             SearchBox(
-                value: output.userName,
+                value: state.userName,
                 onValueChange: { value in
-                    viewModel.input(input: ListViewModel.InputSetUserName(userName: value))
+                    viewModel.action(action: ListViewModel.ActionSetUserName(userName: value))
                 },
                 onSubmit: {
-                    viewModel.input(input: ListViewModel.InputSubmit())
+                    viewModel.action(action: ListViewModel.ActionSubmit())
                 }
             )
             RepoList(
-                repoList: output.repoList
+                repoList: state.repoList
             )
         }
             .onAppear {
-                viewModel.observe { output in
-                    self.output = output
+                viewModel.observeState { state in
+                    self.state = state
                 }
             }
             .onDisappear { viewModel.clear() }

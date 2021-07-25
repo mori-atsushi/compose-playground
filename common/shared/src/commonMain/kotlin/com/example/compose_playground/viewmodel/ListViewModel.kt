@@ -14,8 +14,8 @@ class ListViewModel(
         private const val TAG = "TopViewModel"
     }
 
-    private val _output = MutableStateFlow(Output())
-    val output: StateFlow<Output> = _output
+    private val _state = MutableStateFlow(State.initial)
+    val state: StateFlow<State> = _state
 
     private val submitEvent = MutableSharedFlow<Unit>(
         extraBufferCapacity = 1,
@@ -26,9 +26,9 @@ class ListViewModel(
         submitEvent
             .onEach {
                 try {
-                    val userName = output.value.userName
+                    val userName = state.value.userName
                     val repoList = gitHubApi.getRepoList(userName)
-                    _output.value = _output.value.copy(
+                    _state.value = _state.value.copy(
                         repoList = repoList
                     )
                 } catch (e: Throwable) {
@@ -42,10 +42,10 @@ class ListViewModel(
         }
     }
 
-    fun input(input: Input) {
-        when (input) {
-            is Input.Submit -> submit()
-            is Input.SetUserName -> setUserName(input)
+    fun action(action: Action) {
+        when (action) {
+            is Action.Submit -> submit()
+            is Action.SetUserName -> setUserName(action)
         }
     }
 
@@ -55,19 +55,27 @@ class ListViewModel(
         }
     }
 
-    private fun setUserName(input: Input.SetUserName) {
-        _output.value = _output.value.copy(
-            userName = input.userName
+    private fun setUserName(action: Action.SetUserName) {
+        _state.value = _state.value.copy(
+            userName = action.userName
         )
     }
 
-    data class Output(
-        val userName: String = "Google",
-        val repoList: List<Repo> = emptyList()
-    )
+    data class State(
+        val userName: String,
+        val repoList: List<Repo>
+    ) {
+        companion object {
+            val initial: State
+                get() = State(
+                    userName = "Google",
+                    repoList = emptyList()
+                )
+        }
+    }
 
-    sealed class Input {
-        object Submit : Input()
-        data class SetUserName(val userName: String) : Input()
+    sealed class Action {
+        object Submit : Action()
+        data class SetUserName(val userName: String) : Action()
     }
 }

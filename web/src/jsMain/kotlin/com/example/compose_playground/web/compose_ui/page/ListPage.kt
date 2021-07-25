@@ -12,20 +12,21 @@ import org.jetbrains.compose.common.foundation.layout.Column
 @Composable
 internal fun ListPage() {
     val viewModel = getViewModel<ListViewModel>(Unit)
-    val output by viewModel.output.collectAsState()
-    val dispatch = viewModel::input
+    val state by viewModel.state.collectAsState()
+    val dispatch = viewModel::action
+
     Column {
         SearchBox(
-            value = output.userName,
+            value = state.userName,
             onValueChange = {
-                dispatch(ListViewModel.Input.SetUserName(it))
+                dispatch(ListViewModel.Action.SetUserName(it))
             },
             onSubmit = {
-                dispatch(ListViewModel.Input.Submit)
+                dispatch(ListViewModel.Action.Submit)
             }
         )
         RepoList(
-            repoList = output.repoList
+            repoList = state.repoList
         )
     }
 }
