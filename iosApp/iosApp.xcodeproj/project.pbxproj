@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0D09854F26AD7D1C00EA20E3 /* TopPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D09854E26AD7D1C00EA20E3 /* TopPage.swift */; };
 		0D09855126AD7D6F00EA20E3 /* RepoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D09855026AD7D6F00EA20E3 /* RepoList.swift */; };
+		0D09855326AD8CB500EA20E3 /* SearchBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D09855226AD8CB500EA20E3 /* SearchBox.swift */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		0D09854E26AD7D1C00EA20E3 /* TopPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPage.swift; sourceTree = "<group>"; };
 		0D09855026AD7D6F00EA20E3 /* RepoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoList.swift; sourceTree = "<group>"; };
+		0D09855226AD8CB500EA20E3 /* SearchBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBox.swift; sourceTree = "<group>"; };
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				0D09855026AD7D6F00EA20E3 /* RepoList.swift */,
+				0D09855226AD8CB500EA20E3 /* SearchBox.swift */,
 			);
 			path = widget;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D09854F26AD7D1C00EA20E3 /* TopPage.swift in Sources */,
+				0D09855326AD8CB500EA20E3 /* SearchBox.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				0D09855126AD7D6F00EA20E3 /* RepoList.swift in Sources */,
 			);
