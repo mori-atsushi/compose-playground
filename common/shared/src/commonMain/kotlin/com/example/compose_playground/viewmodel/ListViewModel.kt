@@ -7,7 +7,7 @@ import kotlinx.coroutines.channels.BufferOverflow
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 
-class TopViewModel(
+class ListViewModel(
     private val gitHubApi: GitHubApi
 ) : ViewModel() {
     companion object {

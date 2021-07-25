@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D09854F26AD7D1C00EA20E3 /* TopPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D09854E26AD7D1C00EA20E3 /* TopPage.swift */; };
+		0D09854F26AD7D1C00EA20E3 /* ListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D09854E26AD7D1C00EA20E3 /* ListPage.swift */; };
 		0D09855126AD7D6F00EA20E3 /* RepoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D09855026AD7D6F00EA20E3 /* RepoList.swift */; };
 		0D09855326AD8CB500EA20E3 /* SearchBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D09855226AD8CB500EA20E3 /* SearchBox.swift */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
@@ -27,7 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0D09854E26AD7D1C00EA20E3 /* TopPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPage.swift; sourceTree = "<group>"; };
+		0D09854E26AD7D1C00EA20E3 /* ListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPage.swift; sourceTree = "<group>"; };
 		0D09855026AD7D6F00EA20E3 /* RepoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoList.swift; sourceTree = "<group>"; };
 		0D09855226AD8CB500EA20E3 /* SearchBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBox.swift; sourceTree = "<group>"; };
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		0D09854C26AD7CE800EA20E3 /* page */ = {
 			isa = PBXGroup;
 			children = (
-				0D09854E26AD7D1C00EA20E3 /* TopPage.swift */,
+				0D09854E26AD7D1C00EA20E3 /* ListPage.swift */,
 			);
 			path = page;
 			sourceTree = "<group>";
@@ -190,7 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D09854F26AD7D1C00EA20E3 /* TopPage.swift in Sources */,
+				0D09854F26AD7D1C00EA20E3 /* ListPage.swift in Sources */,
 				0D09855326AD8CB500EA20E3 /* SearchBox.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				0D09855126AD7D6F00EA20E3 /* RepoList.swift in Sources */,

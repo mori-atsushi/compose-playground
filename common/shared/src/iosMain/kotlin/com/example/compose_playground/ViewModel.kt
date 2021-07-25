@@ -1,11 +1,11 @@
 package com.example.compose_playground
 
-import com.example.compose_playground.viewmodel.IOSTopViewModel
+import com.example.compose_playground.viewmodel.IOSListViewModel
 import com.example.compose_playground.viewmodel.ViewModel
 import org.koin.mp.KoinPlatformTools
 
-fun getTopViewModel(): IOSTopViewModel {
-    return IOSTopViewModel(get())
+fun getListViewModel(): IOSListViewModel {
+    return IOSListViewModel(get())
 }
 
 private inline fun <reified T : ViewModel> get(): T {

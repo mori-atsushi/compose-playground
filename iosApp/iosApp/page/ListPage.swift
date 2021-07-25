@@ -1,12 +1,12 @@
 import SwiftUI
 import shared
 
-struct TopPage: View {
-    private let viewModel: IOSTopViewModel
-    @State private var output: TopViewModel.Output
+struct ListPage: View {
+    private let viewModel: IOSListViewModel
+    @State private var output: ListViewModel.Output
 
     init() {
-        let viewModel = ViewModelKt.getTopViewModel()
+        let viewModel = ViewModelKt.getListViewModel()
         self.viewModel = viewModel
         self.output = viewModel.initialOutput
     }
@@ -16,10 +16,10 @@ struct TopPage: View {
             SearchBox(
                 value: output.userName,
                 onValueChange: { value in
-                    viewModel.input(input: TopViewModel.InputSetUserName(userName: value))
+                    viewModel.input(input: ListViewModel.InputSetUserName(userName: value))
                 },
                 onSubmit: {
-                    viewModel.input(input: TopViewModel.InputSubmit())
+                    viewModel.input(input: ListViewModel.InputSubmit())
                 }
             )
             RepoList(

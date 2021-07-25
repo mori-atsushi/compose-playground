@@ -7,12 +7,12 @@ import androidx.compose.runtime.getValue
 import com.example.compose_playground.compose_ui.widget.RepoList
 import com.example.compose_playground.compose_ui.widget.SearchBox
 import com.example.compose_playground.compose_util.getViewModel
-import com.example.compose_playground.viewmodel.TopViewModel
-import com.example.compose_playground.viewmodel.TopViewModel.Input
+import com.example.compose_playground.viewmodel.ListViewModel
+import com.example.compose_playground.viewmodel.ListViewModel.Input
 
 @Composable
-fun TopPage() {
-    val viewModel = getViewModel<TopViewModel>(Unit)
+fun ListPage() {
+    val viewModel = getViewModel<ListViewModel>(Unit)
     val output by viewModel.output.collectAsState()
     val dispatch = viewModel::input
 
