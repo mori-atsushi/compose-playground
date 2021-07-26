@@ -10,6 +10,7 @@
 		0D09854F26AD7D1C00EA20E3 /* ListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D09854E26AD7D1C00EA20E3 /* ListPage.swift */; };
 		0D09855126AD7D6F00EA20E3 /* RepoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D09855026AD7D6F00EA20E3 /* RepoList.swift */; };
 		0D09855326AD8CB500EA20E3 /* SearchBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D09855226AD8CB500EA20E3 /* SearchBox.swift */; };
+		0D9B05EE26AF0B4000143A4B /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9B05ED26AF0B4000143A4B /* ListViewModel.swift */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		0D09854E26AD7D1C00EA20E3 /* ListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPage.swift; sourceTree = "<group>"; };
 		0D09855026AD7D6F00EA20E3 /* RepoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoList.swift; sourceTree = "<group>"; };
 		0D09855226AD8CB500EA20E3 /* SearchBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBox.swift; sourceTree = "<group>"; };
+		0D9B05ED26AF0B4000143A4B /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,6 +66,14 @@
 			path = widget;
 			sourceTree = "<group>";
 		};
+		0D9B05EC26AF0B2F00143A4B /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				0D9B05ED26AF0B4000143A4B /* ListViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
 		7555FF72242A565900829871 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +94,7 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				0D9B05EC26AF0B2F00143A4B /* viewmodel */,
 				0D09854C26AD7CE800EA20E3 /* page */,
 				0D09854D26AD7CEC00EA20E3 /* widget */,
 				7555FF8C242A565B00829871 /* Info.plist */,
@@ -190,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D9B05EE26AF0B4000143A4B /* ListViewModel.swift in Sources */,
 				0D09854F26AD7D1C00EA20E3 /* ListPage.swift in Sources */,
 				0D09855326AD8CB500EA20E3 /* SearchBox.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
