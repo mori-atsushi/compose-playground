@@ -2,35 +2,26 @@ import SwiftUI
 import shared
 
 struct ListPage: View {
-    private let viewModel: IOSListViewModel
-    @State private var state: ListViewModel.State
-
-    init() {
-        let viewModel = ViewModelKt.getListViewModel()
+    @ObservedObject private var viewModel: ListViewModel
+    
+    init(_ viewModel: ListViewModel = ListViewModel()) {
         self.viewModel = viewModel
-        self.state = viewModel.initialState
     }
 
     var body: some View {
         VStack {
             SearchBox(
-                value: state.userName,
+                value: viewModel.state.userName,
                 onValueChange: { value in
-                    viewModel.action(action: ListViewModel.ActionSetUserName(userName: value))
+                    viewModel.action(.setUserName(userName: value))
                 },
                 onSubmit: {
-                    viewModel.action(action: ListViewModel.ActionSubmit())
+                    viewModel.action(.submit)
                 }
             )
             RepoList(
-                repoList: state.repoList
+                repoList: viewModel.state.repoList
             )
         }
-            .onAppear {
-                viewModel.observeState { state in
-                    self.state = state
-                }
-            }
-            .onDisappear { viewModel.clear() }
     }
 }

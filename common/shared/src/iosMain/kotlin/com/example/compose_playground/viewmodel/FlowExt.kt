@@ -4,7 +4,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 
-fun <T> Flow<T>.observe(parent: ViewModel, f: (T) -> Unit) {
+internal fun <T> Flow<T>.observe(parent: ViewModel, f: (T) -> Unit) {
     this
         .onEach { f(it) }
         .launchIn(parent.viewModelScope)
